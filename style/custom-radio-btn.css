@@ -1,0 +1,36 @@
+.radio{
+	font-size: 0.9em;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	margin-right: 10px;
+	padding-left: 15px;
+}
+
+.radio__input{
+	display: none;
+}
+
+.radio__radio{
+	width: 1.25em;
+	height: 1.25em;
+	background: #d8e4e2;
+	border-radius: 50%;
+	margin-right: 10px;
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+.radio__radio::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #ff748c;
+	border-radius: 50%;
+	transform: scale(0);
+}
+
+.radio__input:checked + .radio__radio::after{
+	transform: scale(1);
+}
