@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kwadrat - Pemfaktoran</title>
+    <title>Kwadrat</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -57,7 +59,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Menu</span>
+                    <span>Pilih Operasi</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -115,47 +117,35 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
+                  
+
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                            <h6 class="m-0 font-weight-bold text-primary">Collapsable Card Example</h6>
+                        </a>
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample">
+                            <div class="card-body">
+                                This is a collapsable card example using Bootstrap's built in collapse
+                                functionality. <strong>Click on the card header</strong> to see the card body
+                                collapse and expand!
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Kalkulator Persamaan Kuadrat</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
                         </div>
                         <div class="card-body">
-                            <div class="solver-container center">
-                                <h4>Kalkulator Persamaan Kuadrat</h4>
-                                <p>Masukan koefisien persamaan kuadrat yang ingin anda cari akarnya!</p>
-                                <p><b>ax<sup>2</sup> + bx + c = 0</b></p>
-            
-                                <!-- Ini container untuk tool koefisien -->
-                                <div class="tool-container">
-                                    <label id="tool-input">
-                                        a = <input type="text" size="1" id="a">		
-                                    </label>
-                                    <label id="tool-input">
-                                        b = <input type="text" size="1" id="b">	
-                                    </label>
-                                    <label id="tool-input">
-                                        c = <input type="text" size="1" id="c">	
-                                    </label>
-                                    <br><br>
-                                    <!-- ini container untuk button find dan reset -->
-                                    <div class="btn-container">
-                                        <span class="tool-btn-container">
-                                            <button class="tool-btn" onclick="reset()">Reset</button>
-                                        </span>
-                                        <span class="tool-btn-container">
-                                            <button class="tool-btn" onclick="find()">Find</button>
-                                        </span>
-                                    </div>
-                                </div>
-            
-                                <div id="answer">
-                                    <h4 class="mt-4">Solusi penyelesaian untuk persamaan:</h4>
-                                    <p id="quadratic_equation"><b>ax<sup>2</sup> + bx + c = 0</b> </p>
-                                    <p id="roots" style="font-weight: bold;"></p>
-                                </div>
-                                <br>
-                            </div>
+                            The styling for this basic card example is created by using default Bootstrap
+                            utility classes. By using utility classes, the style of the card component can be
+							easily modified with no need for any custom CSS!
+							
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, et quam ab veniam necessitatibus beatae exercitationem ea recusandae error quos cum consectetur? Tenetur distinctio in, dolores rem consectetur modi cum.
+
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, et quam ab veniam necessitatibus beatae exercitationem ea recusandae error quos cum consectetur? Tenetur distinctio in, dolores rem consectetur modi cum.
                         </div>
                     </div>
 
@@ -165,16 +155,9 @@
             </div>
             <!-- End of Main Content -->
 
-            <div id="notif-modal" class="modal">
-                <div class="modal-content">
-                    <span onclick="closeModal()" class="close">&times;</span>
-                    <p id="notif"></p>
-                </div>
-            </div>
-
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                <div >
+                <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Kwadrat 2021</span>
                     </div>
@@ -184,6 +167,7 @@
 
         </div>
         <!-- End of Content Wrapper -->
+
     </div>
     <!-- End of Page Wrapper -->
 
@@ -192,18 +176,15 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <script type="text/javascript" src="../script/modal.js"></script>
-	<script type="text/javascript" src="../script/solver.js"></script>
-
     <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../js/sb-admin-2.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
