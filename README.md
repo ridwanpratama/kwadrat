@@ -9,6 +9,8 @@
 Aplikasi berbasis web yang memiliki fitur:
 * Menghitung Persamaan Kuadrat dengan Metode
 * Jumlah dan hasil kali akar-akar persamaan kuadrat
+
+Live demo: https://kwadrat.netlify.app/
 	
 ## Technologies
 Project ini dibuat dengan:
