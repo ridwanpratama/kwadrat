@@ -123,13 +123,13 @@
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Kalkulator Persamaan Kuadrat</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Pertidaksamaan Linier</h6>
                         </div>
                         <div class="card-body">
                             <div class="solver-container center">
-                                <h4>Kalkulator Persamaan Kuadrat</h4>
-                                <p>Masukan koefisien persamaan kuadrat yang ingin anda cari akarnya!</p>
-                                <p><b>a(x - x <sub>1</sub>) (x - x <sub>2</sub>) = 0</b></p>
+                                <h4>Pertidaksamaan Linier</h4>
+                                <p>Masukan angka-angkanya</p>
+                                <p><b>a + bx > c</b></p>
 
     
                                 <!-- Ini container untuk tool koefisien -->
@@ -143,6 +143,15 @@
                                     <label id="tool-input">
                                         c = <input type="text" size="1" id="c">	
                                     </label>
+                                    <!-- <label id="tool-input">
+                                        equivalent = <input type="text" size="1" id="equivalent">	
+                                    </label> -->
+                                    <select id="equivalent" class="equivalent">
+                                        <option value="<"><</option>
+                                        <option value=">">></option>
+                                        <option value="<="><=</option>
+                                        <option value=">=">>=</option>
+                                    </select>
                                     <br><br>
                                     <!-- ini container untuk button find dan reset -->
                                     <div class="btn-container">
@@ -156,11 +165,8 @@
                                 </div>
             
                                 <div id="answer" class="answer">
-                                    <h4 class="mt-4">Solusi penyelesaian untuk persamaan:</h4>
-                                    <p id="quadratic_equation">a(x - x<sub>1</sub>) (x - x <sub>2</sub>) = 0</b></p>
-
-                         
-
+                                    <h4 class="mt-4">Hasil dari:</h4>
+                                    <p id="quadratic_equation"><b>ax + b > c</b></p>
                                     <p id="roots" style="font-weight: bold;"></p>
                                 </div>
                                 <br>
@@ -202,7 +208,7 @@
     </a>
 
     <script type="text/javascript" src="script/modal.js"></script>
-	<script type="text/javascript" src="script/kuadrat.js"></script>
+	<script type="text/javascript" src="script/linier.js"></script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

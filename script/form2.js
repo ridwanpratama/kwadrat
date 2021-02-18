@@ -1,8 +1,7 @@
 //fungsi untuk menghitung akar kuadrat
-function quadraticRoots(a,b,c,d){
+function quadraticRoots(a,b,c,d, equivalent){
     const roots = document.getElementById("roots");
     const hasil = (d-a)/(b-c);
-    let equivalent = ">";
  
     if((b-c) <0 && equivalent == "<"){
         equivalent = ">";
@@ -27,7 +26,7 @@ function quadraticRoots(a,b,c,d){
 }
 
 //fungsi untuk mengubah bentuk persamaan kuadrat
-function createQuadraticStr(a,b,c,d,str){
+function createQuadraticStr(a,b,c,d,equivalent,str){
 	//untuk a
 	if(a == 1){
 		//hilangkan angkanya
@@ -77,7 +76,6 @@ function createQuadraticStr(a,b,c,d,str){
 		str = str.replace("c",c);
 	}
 
-	// replace equivalent
 	if(d == 0){
 		str = str.replace("d", d);
 	}
@@ -86,6 +84,20 @@ function createQuadraticStr(a,b,c,d,str){
 	}
 	else{
 		str = str.replace("d",d);
+	}
+
+	// replace equivalent
+	if(equivalent == "<"){
+		str = str.replace("<", "<");
+	}
+	else if(equivalent == ">"){
+		str = str.replace("<", ">");
+	}
+	else if(equivalent == ">="){
+		str = str.replace("<", ">=");
+	}
+	else if(equivalent == "<="){
+		str = str.replace("<", "<=");
 	}
 
 
@@ -103,6 +115,7 @@ function find(){
 	let b = parseInt(document.getElementById("b").value);
 	let c = parseInt(document.getElementById("c").value);
 	let d = parseInt(document.getElementById("d").value);
+	let equivalent = document.getElementById("equivalent").value;
 
 	//validasi input dari user
 	//jika bukan angka, beri alert
@@ -115,11 +128,11 @@ function find(){
 			let quadratic_str = "a + bx < cx + d";
 
 			//mengganti tampilan pers. kuadrat di jawaban
-			quadratic_str = createQuadraticStr(a,b,c, d,quadratic_str);
+			quadratic_str = createQuadraticStr(a,b,c, d,equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
 
 			//mencari akar pers. kuadrat
-			quadraticRoots(a,b,c, d);
+			quadraticRoots(a,b,c, d, equivalent);
 
 			//menampilkan jawaban
 			answer.style.display = "block";
