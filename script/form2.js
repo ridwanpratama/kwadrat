@@ -4,16 +4,16 @@ function quadraticRoots(a,b,c,d){
     const hasil = (d-a)/(b-c);
     let equivalent = ">";
  
-    if((d-a) <0 && equivalent == "<"){
+    if((b-c) <0 && equivalent == "<"){
         equivalent = ">";
     }
-    else if((d-a) <0 && equivalent == ">"){
+    else if((b-c) <0 && equivalent == ">"){
         equivalent = "<";
     }
-    else if((d-a) <0 && equivalent == "<="){
+    else if((b-c) <0 && equivalent == "<="){
         equivalent = ">=";
     }
-    else if((d-a) <0 && equivalent == ">="){
+    else if((b-c) <0 && equivalent == ">="){
         equivalent = "<=";
     }
 	console.log(d)
