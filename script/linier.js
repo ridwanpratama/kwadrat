@@ -18,7 +18,7 @@ function quadraticRoots(a,b,c, equivalent){
     // console.log(hasil);
     console.log(equivalent);
 
-    let ans = hasil + "<br>" + equivalent;
+    let ans = "x "+ equivalent + " " + hasil;
     roots.innerHTML = ans;
 
    
