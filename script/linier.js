@@ -1,21 +1,31 @@
-//fungsi untuk menghitung akar kuadrat
-function quadraticRoots(a,b,c){
+function quadraticRoots(a,b,c, equivalent){
 	const roots = document.getElementById("roots");
+	const hasil = (c-b)/a;
 
-	const xpx = -b/a;
-    const xmx = c/a;
-    const x2px2 = (xpx*xpx) - (2*xmx);
-    const xpxp = x2px2/xmx;
-    const sup = 1;
-    const sub = 2;
+    if(a <0 && equivalent == "<"){
+        equivalent = ">";
+    }
+    else if(a <0 && equivalent == ">"){
+        equivalent = "<";
+    }
+    else if(a <0 && equivalent == "<="){
+        equivalent = ">=";
+    }
+    else if(a <0 && equivalent == ">="){
+        equivalent = "<=";
+    }
 
-    let ans = " x<sub>1</sub> " + " + x<sub>2</sub> = " + xpx + "<br>" + " x<sub>1</sub> x x<sub>2</sub> = " + xmx + "<br>" + " x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = " + x2px2 + "<br>" + x2px2 + "/" + xmx;
-	roots.innerHTML = ans;
+    // console.log(hasil);
+    console.log(equivalent);
 
+    let ans = hasil + "<br>" + equivalent;
+    roots.innerHTML = ans;
+
+   
 }
 
 //fungsi untuk mengubah bentuk persamaan kuadrat
-function createQuadraticStr(a,b,c,str){
+function createQuadraticStr(a,b,c,equivalent,str){
 	//untuk a
 	if(a == 1){
 		//hilangkan angkanya
@@ -33,7 +43,7 @@ function createQuadraticStr(a,b,c,str){
 	//untuk b
 	if(b == 0){
 		//dihilangkan tanda + dan x
-		str = str.replace("+ bx","");
+		str = str.replace("+ b","");
 	}
 	else if(b == 1){
 		//dihilangkan angkanya
@@ -56,7 +66,7 @@ function createQuadraticStr(a,b,c,str){
 
 	//untuk c
 	if(c == 0){
-		str = str.replace("+ c","");
+		str = str.replace("c", c);
 	}
 	else if(c < 0){
 		str = str.replace("+ c","- "+(c/-1));
@@ -64,6 +74,21 @@ function createQuadraticStr(a,b,c,str){
 	else{
 		str = str.replace("c",c);
 	}
+
+	// replace equivalent
+	if(equivalent == "<"){
+		str = str.replace(">", "<");
+	}
+	else if(equivalent == ">"){
+		str = str.replace(">", ">");
+	}
+	else if(equivalent == ">="){
+		str = str.replace(">", ">=");
+	}
+	else if(equivalent == "<="){
+		str = str.replace(">", "<=");
+	}
+
 
 	return str;
 }
@@ -78,24 +103,24 @@ function find(){
 	let a = parseInt(document.getElementById("a").value);
 	let b = parseInt(document.getElementById("b").value);
 	let c = parseInt(document.getElementById("c").value);
+	let equivalent = document.getElementById("equivalent").value;
 
 	//validasi input dari user
 	//jika bukan angka, beri alert
 	const notif = document.getElementById("notif");
-	if(validateInput(a,b,c)){
-		//jika a bukan 0, maka merupakan pers. kuadrat
+	if(validateInput(a,b,c, equivalent)){
 		if(a != 0){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "ax<sup>2</sup> + bx + c = 0";
+			let quadratic_str = "ax + b > c";
 
 			//mengganti tampilan pers. kuadrat di jawaban
-			quadratic_str = createQuadraticStr(a,b,c,quadratic_str);
+			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
 
 			//mencari akar pers. kuadrat
-			quadraticRoots(a,b,c);
+			quadraticRoots(a,b,c, equivalent);
 
 			//menampilkan jawaban
 			answer.style.display = "block";
@@ -120,7 +145,6 @@ function reset(){
 	document.getElementById("b").value = "";
 	document.getElementById("c").value = "";
 	answer.style.display = "none";
-	document.getElementById("quadratic_equation").innerHTML = "ax<sup>2</sup> + bx + c = 0";
 }
 
 

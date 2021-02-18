@@ -85,13 +85,13 @@ function createQuadraticStr(a,b,c,str){
 
 	return str;
 }
-
 //fungsi validasi input
 function validateInput(a,b,c){
 	return !isNaN(a) && !isNaN(b) && !isNaN(c);
 }
 
 function find(){
+
 	//koefisien hanya untuk integer
 	let a = parseInt(document.getElementById("a").value);
 	let b = parseInt(document.getElementById("b").value);
@@ -111,6 +111,8 @@ function find(){
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
+			createX1(a, b, c);
+			createX2(a, b, c);
 
 			//mencari akar pers. kuadrat
 			quadraticRoots(a,b,c);
@@ -140,5 +142,3 @@ function reset(){
 	answer.style.display = "none";
 	document.getElementById("quadratic_equation").innerHTML = "ax<sup>2</sup> + bx + c = 0";
 }
-
-

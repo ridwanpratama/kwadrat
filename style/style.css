@@ -186,7 +186,7 @@ body{
 	background-color: white;
 	margin: auto;
 	padding: 20px;
-	border: 2px solid rgb(85, 130, 226);;
+	border: 2px solid rgb(85, 130, 226);
 	width: 70%;
 }
 
@@ -227,3 +227,16 @@ body{
 #history a img{
 	width: 35px;
 }
+
+.answer{
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.equivalent{
+	padding: 9px;
+	border: 2px solid rgb(167, 195, 253);
+	border-radius: 5px;
+}
+
