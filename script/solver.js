@@ -85,7 +85,6 @@ function createQuadraticStr(a,b,c,str){
 
 	return str;
 }
-
 //fungsi validasi input
 function validateInput(a,b,c){
 	return !isNaN(a) && !isNaN(b) && !isNaN(c);
