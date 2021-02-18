@@ -94,7 +94,7 @@ function createQuadraticStr(a,b,c,str){
 	}
 
 	return str;
-}
+}z
 
 //fungsi validasi input
 function validateInput(a,b,c){

@@ -175,6 +175,7 @@ function validateInput(a,b,c){
 }
 
 function find(){
+
 	//koefisien hanya untuk integer
 	let a = parseInt(document.getElementById("a").value);
 	let b = parseInt(document.getElementById("b").value);
@@ -225,5 +226,3 @@ function reset(){
 	answer.style.display = "none";
 	document.getElementById("quadratic_equation").innerHTML = "ax<sup>2</sup> + bx + c = 0";
 }
-
-
