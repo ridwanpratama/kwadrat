@@ -76,17 +76,17 @@ function createQuadraticStr(a,b,c,equivalent,str){
 	}
 
 	// replace equivalent
-	if(a <0 && equivalent == "<"){
-		str = str.replace(">", ">");
+	if(equivalent == "<"){
+		str = str.replace("<", ">");
 	}
-	else if(a <0 && equivalent == ">"){
-		str = str.replace(">", "<");
+	else if(equivalent == ">"){
+		str = str.replace("<", "<");
 	}
-	else if(a <0 && equivalent == "<="){
-		str = str.replace(">", "<=");
+	else if(equivalent == ">="){
+		str = str.replace("<", "<=");
 	}
-	else if(a <0 && equivalent == ">="){
-		str = str.replace(">", ">=");
+	else if(equivalent == "<="){
+		str = str.replace("<", ">=");
 	}
 
 	return str;
