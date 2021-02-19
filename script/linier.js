@@ -2,18 +2,18 @@ function quadraticRoots(a,b,c, equivalent){
 	const roots = document.getElementById("roots");
 	const hasil = (c-b)/a;
 
-    if(a <0 && equivalent == "<"){
-        equivalent = ">";
-    }
-    else if(a <0 && equivalent == ">"){
-        equivalent = "<";
-    }
-    else if(a <0 && equivalent == "<="){
-        equivalent = ">=";
-    }
-    else if(a <0 && equivalent == ">="){
-        equivalent = "<=";
-    }
+     if(a <0 && equivalent == "<"){
+            equivalent = ">";
+        }
+        else if(a <0 && equivalent == ">"){
+            equivalent = "<";
+        }
+        else if(a <0 && equivalent == "<="){
+            equivalent = ">=";
+        }
+        else if(a <0 && equivalent == ">="){
+            equivalent = "<=";
+        }
 
     // console.log(hasil);
     console.log(equivalent);
@@ -76,19 +76,18 @@ function createQuadraticStr(a,b,c,equivalent,str){
 	}
 
 	// replace equivalent
-	if(equivalent == "<"){
-		str = str.replace(">", "<");
-	}
-	else if(equivalent == ">"){
+	if(a <0 && equivalent == "<"){
 		str = str.replace(">", ">");
 	}
-	else if(equivalent == ">="){
-		str = str.replace(">", ">=");
+	else if(a <0 && equivalent == ">"){
+		str = str.replace(">", "<");
 	}
-	else if(equivalent == "<="){
+	else if(a <0 && equivalent == "<="){
 		str = str.replace(">", "<=");
 	}
-
+	else if(a <0 && equivalent == ">="){
+		str = str.replace(">", ">=");
+	}
 
 	return str;
 }
@@ -113,7 +112,7 @@ function find(){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "ax + b > c";
+			let quadratic_str = "a + bx > c";
 
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
@@ -127,7 +126,7 @@ function find(){
 
 		}
 		else{
-			notif.innerHTML = "Bukan persamaan kuadrat!";
+			notif.innerHTML = "Bukan pertidaksamaan linier!";
 			showModal();
 			reset();
 		}
