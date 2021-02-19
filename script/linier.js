@@ -112,7 +112,7 @@ function find(){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "a + bx > c";
+			let quadratic_str = "ax + b > c";
 
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
