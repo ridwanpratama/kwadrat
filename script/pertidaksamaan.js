@@ -152,7 +152,7 @@ function find(){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "ax²  + bx + c > 0";
+			let quadratic_str = "";
 
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c,equivalent,quadratic_str);
