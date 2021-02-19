@@ -77,16 +77,16 @@ function createQuadraticStr(a,b,c,equivalent,str){
 
 	// replace equivalent
 	if(equivalent == "<"){
-		str = str.replace("<", ">");
-	}
-	else if(equivalent == ">"){
 		str = str.replace("<", "<");
 	}
+	else if(equivalent == ">"){
+		str = str.replace("<", ">");
+	}
 	else if(equivalent == ">="){
-		str = str.replace("<", "<=");
+		str = str.replace("<", ">=");
 	}
 	else if(equivalent == "<="){
-		str = str.replace("<", ">=");
+		str = str.replace("<", "<=");
 	}
 
 	return str;
@@ -99,8 +99,13 @@ const hasil_1 = document.getElementById("hasil_1");
 const hasil_2 = document.getElementById("hasil_2");
 const hasil_3 = document.getElementById("hasil_3");
 
-	
-hasil_1.innerHTML = quadratic;
+let nyari=(a)
+	if(b > 0){
+		nyari = nyari + "x" + "+"
+	}else{
+		nyari = nyari + "x" ;
+	}
+hasil_1.innerHTML = nyari.toString()+" "+ b.toString()+" "+equivalent.toString()+" "+ c.toString();
 //a.toString() + 'x'+ " " + b.toString() + " " + equivalent.toString() + " "  + c.toString();
 let nyoba = pindahRuas(b.toString());
 hasil_2.innerHTML =  a.toString() + 'x'+ " "+ equivalent.toString()+ " " + nyoba.toString();
@@ -127,7 +132,7 @@ function find(){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "ax + b > c";
+			let quadratic_str = "";
 
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
