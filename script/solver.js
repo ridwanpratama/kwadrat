@@ -111,8 +111,6 @@ function find(){
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
-			createX1(a, b, c);
-			createX2(a, b, c);
 
 			//mencari akar pers. kuadrat
 			quadraticRoots(a,b,c);
