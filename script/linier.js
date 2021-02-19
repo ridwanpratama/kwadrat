@@ -92,6 +92,20 @@ function createQuadraticStr(a,b,c,equivalent,str){
 
 	return str;
 }
+function pindahRuas(nilai){
+	return nilai * -1;
+   }
+function createX1(a,b,c,equivalent){
+const hasil_1 = document.getElementById("hasil_1");
+const hasil_2 = document.getElementById("hasil_2");
+const hasil_3 = document.getElementById("hasil_3");
+
+	
+hasil_1.innerHTML = a.toString() + 'x'+ b.toString()  + equivalent.toString()  + c.toString();
+let nyoba = pindahRuas(b.toString());
+hasil_2.innerHTML =  a.toString() + 'x'+ equivalent.toString() + nyoba.toString();
+hasil_3.innerHTML = 'x'+ equivalent.toString() + nyoba.toString() + '/' + a.toString();
+}
 
 //fungsi validasi input
 function validateInput(a,b,c){
@@ -118,6 +132,7 @@ function find(){
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
+			createX1(a, b, c, equivalent);
 
 			//mencari akar pers. kuadrat
 			quadraticRoots(a,b,c, equivalent);
