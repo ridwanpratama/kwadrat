@@ -100,12 +100,18 @@ function pindahRuas(nilai){
 	return nilai * -1;
    }
 
-function createX1(a,b,c,d,equivalent,quadratic){
+function createX1(a,b,c,d,equivalent){
 	const hasil_1 = document.getElementById("hasil_1");
 	const hasil_2 = document.getElementById("hasil_2");
 	const hasil_3 = document.getElementById("hasil_3");
 
-	hasil_1.innerHTML = quadratic;
+	let nyari=(a)
+	if(b > 0){
+		nyari = nyari + "+"
+	}else{
+		nyari = nyari ;
+	}
+	hasil_1.innerHTML = nyari.toString()+" "+ b.toString()+"x"+" "+equivalent.toString()+" "+ c.toString()+"x"+" "+ d.toString();
 	let nyoba = pindahRuas(a)
 	if(nyoba > 0){
 		nyoba = " + " + nyoba;
@@ -121,7 +127,7 @@ function createX1(a,b,c,d,equivalent,quadratic){
 	}else if(coba > 0){
 		coba = " + " + coba;
 	}else{
-		coba = " - " + coba;
+		coba = coba;
 	};
 
 	let str_b = b;
@@ -156,12 +162,12 @@ function find(){
 			//deklarasi variabel
 			const quadraticEq = document.getElementById("quadratic_equation");
 			const answer = document.getElementById("answer");
-			let quadratic_str = "a + bx < cx + d";
+			let quadratic_str = "";
 
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, d,equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
-			createX1(a, b, c, d, equivalent, quadratic_str);
+			createX1(a, b, c, d, equivalent);
 
 			//mencari akar pers. kuadrat
 			quadraticRoots(a, b, c, d, equivalent);
