@@ -15,9 +15,9 @@ function quadraticRoots(a,b,c,d, equivalent){
     else if((d-a) <0 && equivalent == ">="){
         equivalent = "<=";
     }
-	console.log(d)
+	// console.log(d)
     // console.log(hasil);
-    // console.log(equivalent);
+    console.log(equivalent);
  
     let ans = "x "+ equivalent + " " + hasil;
     roots.innerHTML = ans;
@@ -88,16 +88,16 @@ function createQuadraticStr(a,b,c,d,equivalent,str){
 
 	// replace equivalent
 	if(equivalent == "<"){
-		str = str.replace("<", "<");
-	}
-	else if(equivalent == ">"){
 		str = str.replace("<", ">");
 	}
+	else if(equivalent == ">"){
+		str = str.replace("<", "<");
+	}
 	else if(equivalent == ">="){
-		str = str.replace("<", ">=");
+		str = str.replace("<", "<=");
 	}
 	else if(equivalent == "<="){
-		str = str.replace("<", "<=");
+		str = str.replace("<", ">=");
 	}
 
 
