@@ -125,20 +125,12 @@ function createX1(a,b,c,d,equivalent,quadratic){
 	};
 
 	let str_b = b;
-	if(str_b == 1){
-		str_b = " + ";
-	}else if(str_b == -1){
-		str_b = " - ";
-	}else if(str_b > 0){
-		str_b = " + " + str_b;
-	}else{
-		str_b = " - " + str_b;
-	};
-	hasil_2.innerHTML =  str_b + 'x' + coba.toString() + 'x' + equivalent.toString() + d.toString() + nyoba.toString();
+	
+	hasil_2.innerHTML =  str_b + 'x'+ " " + coba.toString() + 'x'+ " " + equivalent.toString()+ " " + d.toString()+ " " + nyoba.toString();
 	let cari= b-c;
 	let kuy= d-a;
 
-	hasil_3.innerHTML = cari.toString() +'x'+ equivalent.toString() + kuy.toString();
+	hasil_3.innerHTML = cari.toString() +'x'+ " "+ equivalent.toString() + kuy.toString();
 
 
 }

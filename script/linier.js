@@ -47,7 +47,7 @@ function createQuadraticStr(a,b,c,equivalent,str){
 	}
 	else if(b == 1){
 		//dihilangkan angkanya
-		str = str.replace("b","");
+		str = str.replace("b",b);
 	}
 	else if(b < 0){
 		//dinegatifkan dan hilang angkanya
@@ -95,16 +95,17 @@ function createQuadraticStr(a,b,c,equivalent,str){
 function pindahRuas(nilai){
 	return nilai * -1;
    }
-function createX1(a,b,c,equivalent){
+function createX1(a,b,c,equivalent,quadratic){
 const hasil_1 = document.getElementById("hasil_1");
 const hasil_2 = document.getElementById("hasil_2");
 const hasil_3 = document.getElementById("hasil_3");
 
 	
-hasil_1.innerHTML = a.toString() + 'x'+ b.toString()  + equivalent.toString()  + c.toString();
+hasil_1.innerHTML = quadratic;
+//a.toString() + 'x'+ " " + b.toString() + " " + equivalent.toString() + " "  + c.toString();
 let nyoba = pindahRuas(b.toString());
-hasil_2.innerHTML =  a.toString() + 'x'+ equivalent.toString() + nyoba.toString();
-hasil_3.innerHTML = 'x'+ equivalent.toString() + nyoba.toString() + '/' + a.toString();
+hasil_2.innerHTML =  a.toString() + 'x'+ " "+ equivalent.toString()+ " " + nyoba.toString();
+hasil_3.innerHTML = 'x'+ " "+ equivalent.toString() + " "+ nyoba.toString() + " "+ '/'+ " " + a.toString();
 }
 
 //fungsi validasi input
@@ -132,7 +133,7 @@ function find(){
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
-			createX1(a, b, c, equivalent);
+			createX1(a, b, c, equivalent, quadratic_str);
 
 			//mencari akar pers. kuadrat
 			quadraticRoots(a,b,c, equivalent);
