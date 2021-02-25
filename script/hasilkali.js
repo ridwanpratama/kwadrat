@@ -4,12 +4,17 @@ function quadraticRoots(a,b,c){
 
 	const xpx = -b/a;
     const xmx = c/a;
+	const xpx2 = (xpx*xpx);
+	const xnxx = (2*xmx);
     const x2px2 = (xpx*xpx) - (2*xmx);
     const xpxp = x2px2/xmx;
     const sup = 1;
     const sub = 2;
 
-    let ans = " x<sub>1</sub> " + " + x<sub>2</sub> = " + xpx + "<br>" + " x<sub>1</sub> x x<sub>2</sub> = " + xmx + "<br>" + " x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = " + x2px2 + "<br>" + x2px2 + "/" + xmx;
+    let ans = " x<sub>1</sub> " + " + x<sub>2</sub> = "+ "-b/a ="+" "+ xpx
+	+ "<br>"+ " x<sub>1</sub> x x<sub>2</sub> = "+ "c/a ="+" "+ xmx + "<br>" 
+	+ " x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = "+ xpx2 +"-"+ xnxx +" " + "=" + " "+ x2px2 
+	+ "<br>" + " x<sub>1</sub>/x<sub>2</sub> + "+" x<sub>2</sub>/x<sub>1</sub> = "+" x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup>/x<sub>1</sub>x<sub>2</sub> ="+ " "+ x2px2 + "/" + xmx;
 	roots.innerHTML = ans;
 
 }

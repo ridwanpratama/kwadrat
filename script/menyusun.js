@@ -22,7 +22,54 @@ function quadraticRoots(a,b){
 	roots.innerHTML = ans;
 
 }
+//Cara Penyelesaian
+//function tanda(nilai){
+//	return nilai * -1;
+ //  }
+function createX1(a,b){
+	const hasil_1 = document.getElementById("hasil_1");
+	const hasil_2 = document.getElementById("hasil_2");
+	const hasil_3 = document.getElementById("hasil_3");
+	
+	let nyari=(a)
+		if(b > 0){
+			nyari = nyari + "x" + "+"
+		}else{
+			nyari = nyari + "x" ;
+		}
+	hasil_1.innerHTML = "("+"x"+"-"+"x1"+")"+ " "+"("+"x"+"-"+"x2"+")"+" "+"="+" "+"0";
+	//a.toString() + 'x'+ " " + b.toString() + " " + equivalent.toString() + " "  + c.toString();
+	//let nyoba = pindahRuas(b.toString());
+	let tandakurung =(a)
+		if(a > 0){
+			tandakurung =  tandakurung 
+		}else{
+			tandakurung = "(" + tandakurung + ")"
+		}
+	let tandakurungb =(b)
+		if(b > 0){
+			tandakurungb = tandakurungb
+		}else{
+			tandakurungb = "(" + tandakurungb + ")"
+		}
+		
+	hasil_2.innerHTML =  "("+"x"+"-"+tandakurung.toString()+")"+ " "+"("+"x"+"-"+tandakurungb.toString()+")"+" "+"="+" "+"0";
+	let hasilminusa=(a)
+	if(a > 0){
+		hasilminusa = "-" + hasilminusa 
+	}else{
+		hasilminusa = "+" + hasilminusa * -1  
+	}
+	let hasilminus=(b)
+		if(b > 0){
+			hasilminus =  "-" + hasilminus 
+		}else{
+			hasilminus = "+" + hasilminus * -1 
+		}
 
+	hasil_3.innerHTML ="("+"x"+hasilminusa.toString()+")"+ " "+"("+"x"+hasilminus.toString()+")"+" "+"="+" "+"0" ;
+	}
+	
 //fungsi validasi input
 function validateInput(a,b){
 	return !isNaN(a) && !isNaN(b);
@@ -41,6 +88,7 @@ function find(){
 		if(a != 0){
 		
 			//mencari akar pers. kuadrat
+			createX1(a,b);
 			quadraticRoots(a,b);
 
 			//menampilkan jawaban
