@@ -18,7 +18,7 @@ function quadraticRoots(a,b,c){
 		}
 		else if(D == 0){
 			//akar penyelesaian sama
-			let x = -b/2*a;
+			let x = (-b + Math.sqrt(D))/(2*a);
 			let ans = "Karena D = " + D + ", maka akarnya adalah " + x;
 			roots.innerHTML = ans;
 		}
