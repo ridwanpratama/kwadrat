@@ -1,4 +1,4 @@
-//fungsi untuk menghitung akar kuadratt
+//fungsi untuk menghitung akar kuadrat
 function quadraticRoots(a,b,c, equivalent){
     const roots = document.getElementById("roots");
     const root = Math.sqrt(b*b - 4*a*c);
@@ -82,7 +82,7 @@ function quadraticRoots(a,b,c, equivalent){
 
     // console.log(hasil);
  
-    let ans = penyelesaian + "<br>" +"x1 = " + answerPlus + " x2 = " + answerMin + "<br>" +  hasil;
+    let ans = soal + "<br>" +  penyelesaian + "<br>" +"x1 = " + answerPlus + " x2 = " + answerMin + "<br>" +  hasil;
     roots.innerHTML = ans;
  
    
