@@ -96,6 +96,7 @@ function createQuadraticStr(a,b,c,d,equivalent,str){
 
 	return str;
 }
+//Cara Penyelesaian
 function pindahRuas(nilai){
 	return nilai * -1;
    }
@@ -167,6 +168,7 @@ function find(){
 			//mengganti tampilan pers. kuadrat di jawaban
 			quadratic_str = createQuadraticStr(a,b,c, d,equivalent,quadratic_str);
 			quadraticEq.innerHTML = quadratic_str;
+			//Maggil Cara Penyelesaian
 			createX1(a, b, c, d, equivalent);
 
 			//mencari akar pers. kuadrat
