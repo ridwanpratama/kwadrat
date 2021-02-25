@@ -1,10 +1,14 @@
-//fungsi untuk menghitung akar kuadrat
+//fungsi untuk menghitung akar kuadratt
 function quadraticRoots(a,b,c, equivalent){
     const roots = document.getElementById("roots");
     const root = Math.sqrt(b*b - 4*a*c);
     const answerPlus = (-(b)+root)/2*a;
     const answerMin = (-(b)-root)/2*a;
     let hasil = "";
+	let penyelesaian = "";
+	let soal = "";
+	let charb = "-"+ -b;
+	let charc = "-"+ -c;
     let test;
  
     if(answerPlus > answerMin){
@@ -55,9 +59,30 @@ function quadraticRoots(a,b,c, equivalent){
         }
     }
 
+	if(answerPlus > 0 && answerMin > 0){
+		penyelesaian = "(x -" + answerPlus +")(x -" + answerMin + ")";
+	}
+	else if(answerPlus < 0 && answerMin < 0){
+		penyelesaian = "(x +" + -answerPlus +")(x +" + -answerMin + ")";
+	}
+	else if(answerPlus > 0 && answerMin < 0){
+		penyelesaian = "(x -" + answerPlus +")(x +" + -answerMin + ")";
+	}
+	else if(answerPlus < 0 && answerMin > 0){
+		penyelesaian = "(x +" + -answerPlus +")(x -" + answerMin + ")";
+	}
+	if(b > 0){
+		charb = "+" + b;
+	}
+	else if (c > 0){
+		charc = "+" + c;
+	}
+
+	soal = a+"x^2 " + charb + "x " + charc + " " + equivalent + " 0 ";
+
     // console.log(hasil);
  
-    let ans = hasil;
+    let ans = penyelesaian + "<br>" +"x1 = " + answerPlus + " x2 = " + answerMin + "<br>" +  hasil;
     roots.innerHTML = ans;
  
    
