@@ -1,4 +1,4 @@
-//fungsi untuk menghitung akar kuadratt
+//fungsi untuk menghitung akar kuadrat
 function quadraticRoots(a,b,c, equivalent){
     const roots = document.getElementById("roots");
     const root = Math.sqrt(b*b - 4*a*c);
