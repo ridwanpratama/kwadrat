@@ -1,0 +1,213 @@
+/*animation*/
+@keyframes opaque{
+	from{
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/*Master style*/
+body{	
+	margin: 0;
+	padding: 0;
+	background-size: 100%;
+ 	background: #fafafa;
+	font-family: 'Open Sans', sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.title-btn a{
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0px;
+	color: white;
+	padding-bottom: 2px;
+	border-bottom: 2px solid transparent;
+	/* animasi untuk hover */
+	transition: 0.5s;
+	transition-property: border;
+}
+
+.title-btn a:hover{
+	border-bottom: 2px solid white;
+}
+
+.title-btn{
+	padding-right: 10px;
+}
+
+.title-btn-exception{
+	font-size: 0.9em;
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+}
+
+#title-focus{
+	border-bottom: 2px solid white;
+}
+
+.center{
+	margin: auto;
+	width: 75%;
+}
+
+.body-container{
+	position: relative;
+	top: 60px;
+	animation-name: opaque;
+	animation-duration: 1.5s;
+}
+
+/*style untuk title*/
+.big-title h1{
+	font-size: 28px;
+	position: relative;
+	align-content: center;
+	color: rgb(45, 142, 206);
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+/*style untuk container*/
+
+.solver-container{
+	position: relative;
+	background: white;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 5px 10px rgb(45, 142, 206);
+}
+
+#tool-input{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#tool-input input{
+	outline: none;
+	border: none;
+	border: 2px solid rgb(45, 142, 206);
+	border-radius: 5px;
+	padding: 8px;
+	width: 40px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: box-shadow;
+}
+
+#tool-input input:focus{
+	box-shadow: 0px 0px 8px rgb(45, 142, 206);
+}
+
+.tool-btn{
+	outline: none;
+	border-radius: 5px;
+	color: white;
+	background-color: rgb(45, 142, 206);
+	font-size: 0.9em;
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+	transition-property: box-shadow,filter;
+}
+
+.tool-btn:focus{
+	filter: brightness(90%);
+	box-shadow: 0px 0px 6px rgb(45, 142, 206);
+}
+
+.tool-btn:hover{
+	filter: brightness(90%);
+	box-shadow: 0px 0px 8px rgb(45, 142, 206);
+}
+
+.tool-btn-container{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#quadratic_equation{
+	font-weight: bold;
+}
+
+#answer{
+	display: none;
+}
+
+.card-item-container{
+	background: white;
+	padding: 20px;
+	text-align: center;
+	border: 3px dashed rgb(45, 142, 206);
+
+	margin: auto;
+	width: 65%;
+}
+
+/* modal style*/
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+	background-color: white;
+	margin: auto;
+	padding: 20px;
+	border: 2px solid rgb(45, 142, 206);
+	width: 70%;
+}
+
+.close{
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.answer{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.equivalent{
+	padding: 9px;
+	border: 2px solid rgb(45, 142, 206);
+	border-radius: 5px;
+}

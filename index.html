@@ -1,245 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web untuk menghitung persamaan kuadrat,pertidaksamaan kuadrat dan pertidaksamaan linier.">
+    <meta name="author" content="Abdul Hilman Thiusana, Muhammad Ridwan Pratama, Restuaji Eliansyah">
     <title>Kwadrat</title>
-     <!-- Nyoba Github-->
-    <!-- Test conflict -->
-    
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/design.min.css">
 </head>
 
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-hashtag"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Kwadrat <sup>2</sup></div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-hashtag"></i>
-                    <span>Home</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Pilih Operasi</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Kuadrat</h6>
-                        <a class="collapse-item" href="metode1.html">Metode 1</a>
-                        <a class="collapse-item" href="metode2.html">Metode 2</a>
-                        <a class="collapse-item" href="metode3.html">Metode 3</a>
-                        <a class="collapse-item" href="menyusun.html">Menyusun</a>
-                        <a class="collapse-item" href="pertidaksamaan.html">Pertidaksamaan</a>
-                    </div>
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Jumlah dan Hasil Kali</h6>
-                        <a class="collapse-item" href="operasi.html">Operasi</a>
-                    </div>
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pertidaksamaan Linier</h6>
-                        <a class="collapse-item" href="linier.html">Operasi 1</a>
-                        <a class="collapse-item" href="form2.html">Operasi 2</a>
-                    </div>
-                </div>
-            </li>
-
-
-
-          
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <ul class="navbar-nav ml-auto">
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="index.html"  role="button">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">About</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                  
-                    <div class="row">
-                    <div class="col-lg-12">
-                    <div class="card shadow mb-4">
-                        <!-- Card Header - Accordion -->
-                        <a href="#collapseCardExample" class="d-block card-header py-3 collapsed" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-                            <h6 class="m-0 font-weight-bold text-primary">Apa itu Kwadrat?</h6>
-                        </a>
-                        <!-- Card Content - Collapse -->
-                        <div class="collapse" id="collapseCardExample">
-                            <div class="card-body">
-                                <span style="color: Blue;"><b>Kwadrat</b></span> 
-                                adalah aplikasi web untuk menghitung persamaan kuadrat,pertidaksamaan kuadrat dan  pertidaksamaan linier.
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                    <!-- <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tentang Kwadrat</h6>
-                        </div>
-                        <div class="card-body">
-                           Fitur yang dimiliki kwadrat: <br>
-                           <b>1. Menghitung Persamaan Kuadrat dengan Metode</b> <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 1</span> <i class="fas fa-angle-double-right"></i> a(x - x<sub>1</sub>)(x - x<sub>2</sub>) = 0 <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 2</span> <i class="fas fa-angle-double-right"></i> ax<sup>2</sup> + bx + c = 0 <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 3</span> <i class="fas fa-angle-double-right"></i> a(x - H)<sup>2</sup> + K = 0 <br>
-                            <b>2. Jumlah dan hasil kali akar-akar persamaan kuadrat </b> <br>
-                            - x<sub>1</sub> + <sub>2</sub> <br>
-                            - x<sub>1</sub> * x<sub>2</sub> <br>
-                            - x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> <br>
-                            - x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> / x<sub>1</sub> * x<sub>2</sub> <br>
-                        </div>
-                    </div> -->
-                <div class="row">
-                    <div class="col-6">
-                        <!-- Basic Card Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Kuadrat</h6>
-                            </div>
-                            <div class="card-body">
-                                <b>* Menyusun Persamaan Kuadrat</b> <br>
-                                <b>* Menghitung Persamaan Kuadrat dengan Metode</b> <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 1</span> <i class="fas fa-angle-double-right"></i> a(x - x<sub>1</sub>)(x - x<sub>2</sub>) = 0 <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 2</span> <i class="fas fa-angle-double-right"></i> ax<sup>2</sup> + bx + c = 0 <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 3</span> <i class="fas fa-angle-double-right"></i> a(x - H)<sup>2</sup> + K = 0 <br>
-                            <b>* Pertidaksamaan Kuadrat</b> <br>
-                            - a + bx > c <br>
-                            <b>* Jumlah dan Kali</b> <br>
-                            - x<sub>1</sub> + <sub>2</sub> <br>
-                            - x<sub>1</sub> * x<sub>2</sub> <br>
-                            - x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> <br>
-                            - x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> / x<sub>1</sub> * x<sub>2</sub> <br>
-                        </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-6">
-                        <!-- Basic Card Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Pertidaksamaan Linier</h6>
-                            </div>
-                            <div class="card-body">
-                                - <span style="color: rgba(0, 0, 255, 0.884);">Metode 1</span> <i class="fas fa-angle-double-right"></i> a + bx > c <br>
-                            - <span style="color: rgba(0, 0, 255, 0.884);">Metode 2</span> <i class="fas fa-angle-double-right"></i> a + bx < cx + d <br>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-                
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Kwadrat 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
     </div>
-    <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+    <a href="http://wikramalab.budayasiswa.my.id/"
+        class="btn-primary-outline btn-sm shadow-sm float-right mx-2 mt-2 text-decoration-none" role="button">Wikrama Lab</a>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <header class="text-center py-5">
+        <div class="container">
+            <h1 class="font-weight-normal pagehead py-3">KWADRAT</h1>
+            <p class="font-weight-normal">Menghitung persamaan kuadrat,pertidaksamaan kuadrat dan pertidaksamaan linier.
+            </p>
+        </div>
+    </header>
+    <section class="team pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 text-center">
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                    <div class="box shadow p-3 mb-5 bg-white rounded">
+                        <div class="avtar">
+                            <img class="img-fluid" src="img/1.webp">
+                        </div>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+                        <div class="box_content">
+                            <a href="page/page1.html" class="title">Kuadrat</a>
+                            <span class="post">Fungsi Kuadrat</span>
+                        </div>
 
+                        <ul class="icons">
+                            <p> Pemfaktoran, Menghitung Persamaan Kuadrat, Menyusun Persamaan Kuadrat, Pertidaksamaan
+                                Kuadrat</p>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 text-center">
+
+                    <div class="box shadow p-3 mb-5 bg-white rounded">
+                        <div class="avtar">
+                            <img class="img-fluid" src="img/2.webp">
+                        </div>
+
+                        <div class="box_content">
+                            <a href="page/materi/operasi.html" class="title">Jumlah dan hasil Kali</a>
+                            <span class="post">Fungsi jumlah dan hasil kali</span>
+                        </div>
+
+                        <ul class="icons">
+                            <p>Menghitung hasil jumlah, kali dan bagi dari akar-akar persamaan kuadrat</p><br>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 text-center">
+
+                    <div class="box shadow p-3 mb-5 bg-white rounded">
+                        <div class="avtar">
+                            <img class="img-fluid" src="img/4.webp">
+                        </div>
+
+                        <div class="box_content">
+                            <a href="page/page3.html" class="title">Pertidaksamaan Linier</a>
+                            <span class="post">Fungsi pertidaksamaan linier</span>
+                        </div>
+
+                        <ul class="icons">
+                            <p>Mencari hasil untuk Pertidaksamaan Linier</p><br><br>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 800);
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Kwadrat </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.min.css">
+</head>
+
+<body>
+    <!-- Ini container -->
+    <div class="container"></div>
+
+    <!-- body container untuk dibawah topbar -->
+    <div class="body-container">
+        <div class="big-title">
+            <a href="../../index.html" class="btn btn-primary btn-sm shadow-sm" style="margin-left: 13%; margin-bottom: -50px;" role="button">Kembali</a>
+        </div>
+        <div class="solver-container center mt-5">
+            <h4>Operasi Persamaan Kuadrat</h4>
+            <p>Jumlah dan hasil kali akar-akar persamaan kuadrat</p>
+            <p>ax<sup>2</sup>+bx+c=0</p>
+
+
+            <!-- Ini container untuk tool koefisien -->
+            <div class="tool-container">
+                <label id="tool-input">
+                    a = <input type="text" size="1" id="a">
+                </label>
+                <label id="tool-input">
+                    b = <input type="text" size="1" id="b">
+                </label>
+                <label id="tool-input">
+                    c = <input type="text" size="1" id="c">
+                </label>
+                <br><br>
+                <!-- ini container untuk button find dan reset -->
+                <div class="btn-container">
+                    <span class="tool-btn-container">
+                        <button class="tool-btn" onclick="reset()">Hapus</button>
+                    </span>
+                    <span class="tool-btn-container">
+                        <button class="tool-btn" onclick="find()">Hitung</button>
+                    </span>
+                </div>
+            </div>
+
+            <div id="answer" class="answer">
+                <h4 class="mt-4">Solusi penyelesaian untuk persamaan:</h4>
+                <p id="quadratic_equation">ax<sup>2</sup>+bx+c=0</b></p>
+                <p id="roots" style="font-weight: bold;"></p>
+            </div>
+            <br>
+        </div>
+        <br><br>
+    </div>
+
+    <!-- modal -->
+    <div id="notif-modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <p id="notif"></p>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../../script/modal.js"></script>
+    <script type="text/javascript" src="../../script/hasilkali.js"></script>
+</body>
+
+</html>

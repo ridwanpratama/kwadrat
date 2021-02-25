@@ -82,7 +82,7 @@ function quadraticRoots(a,b,c, equivalent){
 
     // console.log(hasil);
  
-    let ans = penyelesaian + "<br>" +"x1 = " + answerPlus + " x2 = " + answerMin + "<br>" +  hasil;
+    let ans = soal + "<br>" +  penyelesaian + "<br>" +"x1 = " + answerPlus + " x2 = " + answerMin + "<br>" +  hasil;
     roots.innerHTML = ans;
  
    
