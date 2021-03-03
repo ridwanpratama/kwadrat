@@ -91,8 +91,8 @@ function createQuadraticStr(a,b,c,equivalent,str){
 
 	return str;
 }
-function pindahRuas(nilai){
-	return nilai * -1;
+function pindahRuas(nilai,kanan){
+	return kanan - (nilai * -1);
    }
 function createX1(a,b,c,equivalent,quadratic){
 const hasil_1 = document.getElementById("hasil_1");
@@ -107,7 +107,7 @@ let nyari=(a)
 	}
 hasil_1.innerHTML = nyari.toString()+" "+ b.toString()+" "+equivalent.toString()+" "+ c.toString();
 //a.toString() + 'x'+ " " + b.toString() + " " + equivalent.toString() + " "  + c.toString();
-let nyoba = pindahRuas(b.toString());
+let nyoba = pindahRuas(b.toString(),c);
 hasil_2.innerHTML =  a.toString() + 'x'+ " "+ equivalent.toString()+ " " + nyoba.toString();
 hasil_3.innerHTML = 'x'+ " "+ equivalent.toString() + " "+ nyoba.toString() + " "+ '/'+ " " + a.toString();
 }
